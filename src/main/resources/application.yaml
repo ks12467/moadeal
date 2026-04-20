@@ -1,3 +1,21 @@
 spring:
   application:
     name: moadeal
+  profile:
+    active: local
+
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+
+    servlet:
+      multipart:
+        max-file-size: 10MB
+        max-request-size: 10MB
+
+  logging:
+    level:
+      org.hibernate.SQL: debug
+      org.hibernate.type: trace
