@@ -14,13 +14,13 @@ public class BaseResponse<T> {
     private final String message;
     private final int status;
 
-    public static <T> BaseResponse<T> success(SusccessStatus status, T data) {
+    public static <T> BaseResponse<T> success(BaseCode code, T data) {
         return new BaseResponse<>(
                 true,
                 data,
-                status.getCode(),
-                status.getMessage(),
-                status.getStatus()
+                code.getCode(),
+                code.getMessage(),
+                code.getStatus()
         );
     }
 
